@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -7,6 +8,7 @@ void loop()
 {
     for(int i; i<10; i++)
     {
+	this_thread::sleep_for(chrono::milliseconds(500));
         cout << i << endl;
     }
 }
